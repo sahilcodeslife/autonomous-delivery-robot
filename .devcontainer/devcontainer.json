@@ -1,0 +1,35 @@
+{
+    "name": "Jetson ROS 2 Humble Dev",
+    "image": "dustynv/ros:humble-desktop-l4t-r36.2.0",
+    "runArgs": [
+        "--runtime", "nvidia",
+        "--network", "host",
+        "--privileged",
+        "--ipc", "host",
+        "-e", "DISPLAY=${localEnv:DISPLAY}"
+    ],
+    "containerEnv": {
+        "ROS_DISTRO": "humble",
+        "ROS_DOMAIN_ID": "0" 
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-python.python",
+                "ms-iot.vscode-ros",
+                "redhat.vscode-xml",
+                "twxs.cmake"
+            ],
+            "settings": {
+                "python.autoComplete.extraPaths": ["/opt/ros/humble/lib/python3.10/site-packages"],
+                "python.analysis.extraPaths": ["/opt/ros/humble/lib/python3.10/site-packages"]
+            }
+        }
+    },
+    "mounts": [
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+    ],
+    "remoteUser": "root",
+    "postCreateCommand": "rosdep update && echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc"
+}
