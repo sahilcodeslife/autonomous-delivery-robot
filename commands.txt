@@ -1,0 +1,2 @@
+running the install thing:
+./ros2_install.sh <package_name>

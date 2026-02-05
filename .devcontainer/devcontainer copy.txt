@@ -1,0 +1,27 @@
+{
+    "name": "ROS Humble Jetson",
+    "image": "dustynv/ros:humble-desktop-l4t-r36.2.0",
+    "runArgs": [
+        "--runtime=nvidia",
+        "--network=host",
+        "--privileged",
+        "-e", "DISPLAY=:0",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+    ],
+    // Combined multiple commands into one postCreateCommand
+    "postCreateCommand": "chmod +x /workspaces/autonomous-delivery-robot/ros2_install.sh && echo 'source /ros_entrypoint.sh' >> ~/.bashrc",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-iot.vscode-ros",
+                "ms-vscode.cpptools",
+                "ms-python.python"
+            ]
+        }
+    },
+    "remoteUser": "root",
+    "remoteEnv": {
+        "ROS_WORKSPACE": "/workspaces/autonomous-delivery-robot/ros2_ws"
+    }
+}

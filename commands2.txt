@@ -1,0 +1,11 @@
+# Check status
+git status
+
+# Add all changes
+git add .
+
+# Commit with message
+git commit -m "Add ROS2 setup scripts and package configuration"
+
+# Push to remote
+git push origin main
