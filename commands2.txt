@@ -1,3 +1,5 @@
+#must do all the commits from inside the container. 
+
 # Check status
 git status
 
@@ -9,3 +11,4 @@ git commit -m "Add ROS2 setup scripts and package configuration"
 
 # Push to remote
 git push origin main
+
