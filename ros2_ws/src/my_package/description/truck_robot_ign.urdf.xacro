@@ -212,12 +212,44 @@
   </joint>
 
   <!-- Instantiate wheels -->
-  <xacro:wheel prefix="front_left" reflect_y="1" reflect_x="1"/>
-  <xacro:wheel prefix="front_right" reflect_y="-1" reflect_x="1"/>
-  <xacro:wheel prefix="rear_left" reflect_y="1" reflect_x="-1"/>
-  <xacro:wheel prefix="rear_right" reflect_y="-1" reflect_x="-1"/>
+<xacro:wheel prefix="front_left" reflect_y="1" reflect_x="1"/>
+<xacro:wheel prefix="front_right" reflect_y="-1" reflect_x="1"/>
+<xacro:wheel prefix="rear_left" reflect_y="1" reflect_x="-1"/>
+<xacro:wheel prefix="rear_right" reflect_y="-1" reflect_x="-1"/>
 
-  <!-- Ignition Gazebo plugins -->
+<!-- ADD THESE WHEEL FRICTION PARAMETERS -->
+<gazebo reference="front_left_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
+
+<gazebo reference="front_right_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
+
+<gazebo reference="rear_left_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
+
+<gazebo reference="rear_right_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
+  
   <gazebo>
     <!-- Differential Drive Controller for Ignition Gazebo -->
     <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
