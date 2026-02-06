@@ -1,0 +1,1 @@
+/workspaces/autonomous-delivery-robot/ros2_ws/src/my_package/launch/ign_gazebo_truck.launch.py

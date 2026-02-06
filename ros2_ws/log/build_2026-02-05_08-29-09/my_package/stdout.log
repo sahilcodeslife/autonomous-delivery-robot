@@ -1,0 +1,29 @@
+running develop
+running egg_info
+creating my_package.egg-info
+writing my_package.egg-info/PKG-INFO
+writing dependency_links to my_package.egg-info/dependency_links.txt
+writing requirements to my_package.egg-info/requires.txt
+writing top-level names to my_package.egg-info/top_level.txt
+writing manifest file 'my_package.egg-info/SOURCES.txt'
+reading manifest file 'my_package.egg-info/SOURCES.txt'
+writing manifest file 'my_package.egg-info/SOURCES.txt'
+running build_ext
+Creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my-package.egg-link (link to .)
+
+Installed /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package
+running install_data
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index/packages
+copying resource/my_package -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index/packages
+copying package.xml -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/robot_state_publisher.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/talker.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/ign_gazebo_truck.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/listener.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/truck_robot_ign.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/example_robot.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/truck_robot.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description

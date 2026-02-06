@@ -27,6 +27,8 @@ apt install -y ros-humble-xacro ros-humble-joint-state-publisher-gui
 # Install Joy for gamepad support
 echo "Installing Joy for gamepad support..."
 apt install -y ros-humble-joy
+apt install -y ros-humble-teleop-twist-joy
+
 
 # Clean up
 apt clean
@@ -34,7 +36,7 @@ rm -rf /var/lib/apt/lists/*
 
 # Add Tegra environment variables to bashrc for persistence
 echo "Setting up Tegra environment variables..."
-echo "export GALLIUM_HUD=1" >> ~/.bashrc
+#echo "export GALLIUM_HUD=1" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/usr/lib/aarch64-linux-gnu/tegra" >> ~/.bashrc
 
 echo "Fixing ROS2 package paths..."

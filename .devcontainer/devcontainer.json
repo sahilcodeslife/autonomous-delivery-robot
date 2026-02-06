@@ -5,8 +5,9 @@
         "--runtime=nvidia",
         "--network=host",
         "--privileged",
-        "-e", "DISPLAY=:1",
-        "-v", "/tmp/.X11-unix:/tmp/.X11-unix"
+        "-e", "DISPLAY=:0",
+        "-v", "/tmp/.X11-unix:/tmp/.X11-unix",
+        "-v", "/dev:/dev"
     ],
     // Combined multiple commands into one postCreateCommand
     //"postCreateCommand": "chmod +x /workspaces/autonomous-delivery-robot/ros2_install.sh && echo 'source /ros_entrypoint.sh' >> ~/.bashrc",
