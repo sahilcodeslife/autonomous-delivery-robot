@@ -4,9 +4,9 @@
 
 ## Project Status
 
-**Current Phase**: Hardware assembly + Nav2 integration  
-**Target Demo**: Autonomous delivery across campus (Spring 2025)  
-**Latest Update**: Jetson Orin Nano configured, RPLIDAR integrated, chassis design finalized
+**Current Phase**: Hardware design + assembly
+**Target Demo**: End of March
+**Latest Update**: Jetson Orin Nano configured, components tested, 
 
 ---
 
@@ -19,7 +19,7 @@ Building a fully autonomous delivery robot from scratch to navigate outdoor camp
 ## Current Features
 
 ✅ **ROS2 Nav2 Integration** - Navigation stack configured and tested in simulation  
-✅ **SLAM Capability** - RPLIDAR generating 2D maps of environment  
+🔄 **SLAM Capability** - RPLIDAR generating 2D maps of environment  
 🔄 **3D-Printed Chassis** - Custom designed for payload capacity and sensor mounting  
 🔄 **Jetson Orin Nano Setup** - ARM64 environment with ROS2 Humble running  
 🔄 **Simulation Environment** - Gazebo testing for algorithm development  
