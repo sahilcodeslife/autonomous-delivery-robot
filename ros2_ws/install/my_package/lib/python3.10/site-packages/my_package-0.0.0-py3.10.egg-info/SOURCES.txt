@@ -1,0 +1,23 @@
+package.xml
+setup.cfg
+setup.py
+../../build/my_package/my_package.egg-info/PKG-INFO
+../../build/my_package/my_package.egg-info/SOURCES.txt
+../../build/my_package/my_package.egg-info/dependency_links.txt
+../../build/my_package/my_package.egg-info/requires.txt
+../../build/my_package/my_package.egg-info/top_level.txt
+../../build/my_package/my_package.egg-info/zip-safe
+description/example_robot.urdf.xacro
+description/truck_robot.urdf.xacro
+description/truck_robot_ign.urdf copy.xacro
+description/truck_robot_ign.urdf.xacro
+launch/ign_gazebo_truck.launch.py
+launch/listener.launch.py
+launch/robot_state_publisher.launch.py
+launch/talker.launch.py
+launch/teleop_joy.launch.py
+my_package/__init__.py
+resource/my_package
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

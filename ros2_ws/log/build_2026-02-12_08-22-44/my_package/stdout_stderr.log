@@ -1,0 +1,54 @@
+running egg_info
+creating ../../build/my_package/my_package.egg-info
+writing ../../build/my_package/my_package.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build
+creating /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib
+creating /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package
+copying my_package/__init__.py -> /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package
+running install
+/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running install_lib
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+copying /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package/__init__.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+byte-compiling /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index/packages
+copying resource/my_package -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index/packages
+copying package.xml -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/robot_state_publisher.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/talker.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/teleop_joy.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/ign_gazebo_truck.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+copying launch/listener.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch
+creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/truck_robot_ign.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/truck_robot_ign.urdf copy.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/example_robot.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+copying description/truck_robot.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description
+running install_egg_info
+Copying ../../build/my_package/my_package.egg-info to /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/install.log'

@@ -1,45 +1,55 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="truck_robot">
 
+  <!-- Material definitions for RViz2 -->
   <material name="gray">
     <color rgba="0.5 0.5 0.5 1"/>
   </material>
+  
   <material name="blue">
     <color rgba="0.2 0.4 0.8 1"/>
   </material>
+  
   <material name="red">
     <color rgba="0.8 0.1 0.1 1"/>
   </material>
+  
   <material name="black">
     <color rgba="0.1 0.1 0.1 1"/>
   </material>
-  <material name="green">
-    <color rgba="0.1 0.8 0.1 1"/>
-  </material>
 
+  <!-- Define xacro properties for easy customization -->
   <xacro:property name="PI" value="3.14159265359"/>
+  
+  <!-- Truck dimensions -->
   <xacro:property name="chassis_length" value="1.2"/>
   <xacro:property name="chassis_width" value="0.5"/>
   <xacro:property name="chassis_height" value="0.15"/>
   <xacro:property name="chassis_mass" value="15.0"/>
+  
   <xacro:property name="cabin_length" value="0.4"/>
   <xacro:property name="cabin_width" value="0.5"/>
   <xacro:property name="cabin_height" value="0.35"/>
   <xacro:property name="cabin_mass" value="5.0"/>
+  
+  <!-- Wheel properties -->
   <xacro:property name="wheel_radius" value="0.078"/>
   <xacro:property name="wheel_width" value="0.08"/>
   <xacro:property name="wheel_mass" value="1.0"/>
   <xacro:property name="wheel_offset_x" value="0.35"/>
   <xacro:property name="wheel_offset_y" value="0.3"/>
   <xacro:property name="wheel_offset_z" value="0.0"/>
+  
+  <!-- LIDAR properties -->
   <xacro:property name="lidar_radius" value="0.05"/>
   <xacro:property name="lidar_height" value="0.07"/>
   <xacro:property name="lidar_mass" value="0.3"/>
+  
+  <!-- Camera properties -->
   <xacro:property name="camera_size" value="0.05"/>
   <xacro:property name="camera_mass" value="0.1"/>
-  <xacro:property name="imu_size" value="0.02"/>
-  <xacro:property name="imu_mass" value="0.015"/>
 
+  <!-- Macro for inertial properties of a box -->
   <xacro:macro name="box_inertia" params="mass length width height">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -50,6 +60,7 @@
     </inertial>
   </xacro:macro>
 
+  <!-- Macro for inertial properties of a cylinder -->
   <xacro:macro name="cylinder_inertia" params="mass radius height">
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -60,6 +71,7 @@
     </inertial>
   </xacro:macro>
 
+  <!-- Macro for wheels -->
   <xacro:macro name="wheel" params="prefix reflect_y reflect_x">
     <link name="${prefix}_wheel">
       <visual>
@@ -67,7 +79,9 @@
         <geometry>
           <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
         </geometry>
-        <material name="black"/>
+        <material name="black">
+          <color rgba="0.1 0.1 0.1 1"/>
+        </material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="${PI/2} 0 0"/>
@@ -86,15 +100,19 @@
     </joint>
   </xacro:macro>
 
+  <!-- Base footprint (for navigation) -->
   <link name="base_footprint"/>
 
+  <!-- Base link (chassis) -->
   <link name="base_link">
     <visual>
       <origin xyz="0 0 ${chassis_height/2}" rpy="0 0 0"/>
       <geometry>
         <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
       </geometry>
-      <material name="gray"/>
+      <material name="gray">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 ${chassis_height/2}" rpy="0 0 0"/>
@@ -105,19 +123,23 @@
     <xacro:box_inertia mass="${chassis_mass}" length="${chassis_length}" width="${chassis_width}" height="${chassis_height}"/>
   </link>
 
+  <!-- Joint connecting footprint to base_link -->
   <joint name="base_joint" type="fixed">
     <parent link="base_footprint"/>
     <child link="base_link"/>
     <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
   </joint>
 
+  <!-- Cabin link -->
   <link name="cabin_link">
     <visual>
       <origin xyz="0 0 ${cabin_height/2}" rpy="0 0 0"/>
       <geometry>
         <box size="${cabin_length} ${cabin_width} ${cabin_height}"/>
       </geometry>
-      <material name="blue"/>
+      <material name="blue">
+        <color rgba="0.2 0.4 0.8 1"/>
+      </material>
     </visual>
     <collision>
       <origin xyz="0 0 ${cabin_height/2}" rpy="0 0 0"/>
@@ -128,20 +150,26 @@
     <xacro:box_inertia mass="${cabin_mass}" length="${cabin_length}" width="${cabin_width}" height="${cabin_height}"/>
   </link>
 
+  <!-- Joint connecting cabin to chassis -->
   <joint name="cabin_joint" type="fixed">
     <parent link="base_link"/>
     <child link="cabin_link"/>
     <origin xyz="${chassis_length/2 - cabin_length/2} 0 ${chassis_height}" rpy="0 0 0"/>
   </joint>
 
+  <!-- LIDAR link -->
   <link name="lidar_link">
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
       </geometry>
-      <material name="red"/>
+      <material name="red">
+        <color rgba="0.8 0.1 0.1 1"/>
+      </material>
     </visual>
     <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <cylinder radius="${lidar_radius}" length="${lidar_height}"/>
       </geometry>
@@ -149,20 +177,26 @@
     <xacro:cylinder_inertia mass="${lidar_mass}" radius="${lidar_radius}" height="${lidar_height}"/>
   </link>
 
+  <!-- Joint connecting LIDAR to cabin top -->
   <joint name="lidar_joint" type="fixed">
     <parent link="cabin_link"/>
     <child link="lidar_link"/>
     <origin xyz="0 0 ${cabin_height + lidar_height/2}" rpy="0 0 0"/>
   </joint>
 
+  <!-- Camera link -->
   <link name="camera">
     <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <box size="${camera_size} ${camera_size} ${camera_size}"/>
       </geometry>
-      <material name="black"/>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 1"/>
+      </material>
     </visual>
     <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <box size="${camera_size} ${camera_size} ${camera_size}"/>
       </geometry>
@@ -170,56 +204,54 @@
     <xacro:box_inertia mass="${camera_mass}" length="${camera_size}" width="${camera_size}" height="${camera_size}"/>
   </link>
 
+  <!-- Joint connecting camera to cabin front -->
   <joint name="camera_joint" type="fixed">
     <parent link="cabin_link"/>
     <child link="camera"/>
     <origin xyz="${cabin_length/2} 0 ${cabin_height/2}" rpy="0 0 0"/>
   </joint>
 
-  <link name="imu_link">
-    <visual>
-      <geometry>
-        <box size="${imu_size} ${imu_size} ${imu_size}"/>
-      </geometry>
-      <material name="green"/>
-    </visual>
-    <collision>
-      <geometry>
-        <box size="${imu_size} ${imu_size} ${imu_size}"/>
-      </geometry>
-    </collision>
-    <xacro:box_inertia mass="${imu_mass}" length="${imu_size}" width="${imu_size}" height="${imu_size}"/>
-  </link>
+  <!-- Instantiate wheels -->
+<xacro:wheel prefix="front_left" reflect_y="1" reflect_x="1"/>
+<xacro:wheel prefix="front_right" reflect_y="-1" reflect_x="1"/>
+<xacro:wheel prefix="rear_left" reflect_y="1" reflect_x="-1"/>
+<xacro:wheel prefix="rear_right" reflect_y="-1" reflect_x="-1"/>
 
-  <joint name="imu_joint" type="fixed">
-    <parent link="base_link"/>
-    <child link="imu_link"/>
-    <origin xyz="0 0 ${chassis_height}" rpy="0 0 0"/>
-  </joint>
+<!-- ADD THESE WHEEL FRICTION PARAMETERS -->
+<gazebo reference="front_left_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
 
-  <xacro:wheel prefix="front_left" reflect_y="1" reflect_x="1"/>
-  <xacro:wheel prefix="front_right" reflect_y="-1" reflect_x="1"/>
-  <xacro:wheel prefix="rear_left" reflect_y="1" reflect_x="-1"/>
-  <xacro:wheel prefix="rear_right" reflect_y="-1" reflect_x="-1"/>
+<gazebo reference="front_right_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
 
-  <gazebo reference="front_left_wheel">
-    <mu1>0.5</mu1>
-    <mu2>0.5</mu2>
-  </gazebo>
-  <gazebo reference="front_right_wheel">
-    <mu1>0.5</mu1>
-    <mu2>0.5</mu2>
-  </gazebo>
-  <gazebo reference="rear_left_wheel">
-    <mu1>0.5</mu1>
-    <mu2>0.5</mu2>
-  </gazebo>
-  <gazebo reference="rear_right_wheel">
-    <mu1>0.5</mu1>
-    <mu2>0.5</mu2>
-  </gazebo>
+<gazebo reference="rear_left_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
 
+<gazebo reference="rear_right_wheel">
+  <mu1>1.0</mu1>
+  <mu2>1.0</mu2>
+  <kp>10000000.0</kp>
+  <kd>1.0</kd>
+  <minDepth>0.001</minDepth>
+</gazebo>
+  
   <gazebo>
+    <!-- Differential Drive Controller for Ignition Gazebo -->
     <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
       <left_joint>front_left_wheel_joint</left_joint>
       <left_joint>rear_left_wheel_joint</left_joint>
@@ -227,7 +259,11 @@
       <right_joint>rear_right_wheel_joint</right_joint>
       <wheel_separation>${wheel_offset_y * 2}</wheel_separation>
       <wheel_radius>${wheel_radius}</wheel_radius>
+      
+      <!-- ADD THIS LINE: Use perfect physics-based odometry -->
       <odometry_source>world</odometry_source>
+      
+      <odom_publish_frequency>50</odom_publish_frequency>
       <topic>cmd_vel</topic>
       <odom_topic>odom</odom_topic>
       <tf_topic>/tf</tf_topic>
@@ -236,6 +272,7 @@
     </plugin>
   </gazebo>
 
+  <!-- LIDAR sensor for Ignition Gazebo -->
   <gazebo reference="lidar_link">
     <sensor name="lidar_sensor" type="gpu_lidar">
       <topic>scan</topic>
@@ -261,31 +298,22 @@
     </sensor>
   </gazebo>
 
-  <!-- <gazebo reference="imu_link">
-    <sensor name="imu_sensor" type="imu">
-      <topic>imu</topic>
-      <update_rate>100</update_rate>
-      <gz_frame_id>imu_link</gz_frame_id>
-      <always_on>true</always_on>
-    </sensor>
-  </gazebo> -->
-
+  <!-- Sensors system plugin -->
   <gazebo>
     <plugin filename="libignition-gazebo-sensors-system.so" name="ignition::gazebo::systems::Sensors">
       <render_engine>ogre2</render_engine>
     </plugin>
   </gazebo>
 
+  <!-- Joint State Publisher plugin -->
   <gazebo>
-    <plugin filename="libignition-gazebo-joint-state-publisher-system.so" name="ignition::gazebo::systems::JointStatePublisher"/>
+  <plugin filename="libignition-gazebo-joint-state-publisher-system.so" 
+          name="ignition::gazebo::systems::JointStatePublisher">
+    <joint_name>front_left_wheel_joint</joint_name>
+    <joint_name>front_right_wheel_joint</joint_name>
+    <joint_name>rear_left_wheel_joint</joint_name>
+    <joint_name>rear_right_wheel_joint</joint_name>
+  </plugin>
   </gazebo>
-  <gazebo reference="base_link">
-    <sensor name="imu_sensor" type="imu">
-      <topic>imu</topic>
-      <update_rate>100</update_rate>
-      <always_on>true</always_on>
-    </sensor>
-  </gazebo>
-  
 
 </robot>
