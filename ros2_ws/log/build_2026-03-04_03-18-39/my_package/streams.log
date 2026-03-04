@@ -1,0 +1,37 @@
+[2.162s] Invoking command in '/workspaces/autonomous-delivery-robot/ros2_ws/src/my_package': PYTHONPATH=/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/prefix_override:/workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build install --record /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/install.log --single-version-externally-managed
+[2.611s] running egg_info
+[2.641s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[2.643s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[2.644s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[2.644s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[2.645s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[2.706s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[2.708s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[2.708s] running build
+[2.709s] running build_py
+[2.709s] copying my_package/motor_bridge_node.py -> /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package
+[2.710s] running install
+[2.711s] /usr/local/lib/python3.10/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[2.711s] !!
+[2.712s] 
+[2.712s]         ********************************************************************************
+[2.712s]         Please avoid running ``setup.py`` directly.
+[2.713s]         Instead, use pypa/build, pypa/installer or other
+[2.713s]         standards-based tools.
+[2.713s] 
+[2.713s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[2.714s]         ********************************************************************************
+[2.714s] 
+[2.715s] !!
+[2.715s]   self.initialize_options()
+[2.721s] running install_lib
+[2.751s] copying /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package/motor_bridge_node.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+[2.753s] byte-compiling /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/motor_bridge_node.py to motor_bridge_node.cpython-310.pyc
+[2.757s] running install_data
+[2.788s] running install_egg_info
+[2.821s] removing '/workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info' (and everything under it)
+[2.823s] Copying ../../build/my_package/my_package.egg-info to /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+[2.824s] running install_scripts
+[3.149s] Installing motor_bridge_node script to /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/my_package
+[3.150s] writing list of installed files to '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/install.log'
+[3.227s] Invoked command in '/workspaces/autonomous-delivery-robot/ros2_ws/src/my_package' returned '0': PYTHONPATH=/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/prefix_override:/workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build install --record /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/install.log --single-version-externally-managed

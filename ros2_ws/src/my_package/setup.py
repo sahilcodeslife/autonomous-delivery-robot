@@ -28,6 +28,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'motor_bridge_node = my_package.motor_bridge_node:main'
         ],
     },
 )

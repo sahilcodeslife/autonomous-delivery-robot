@@ -1,0 +1,98 @@
+[0.000000] (-) TimerEvent: {}
+[0.000808] (-) JobUnselected: {'identifier': 'rplidar_ros'}
+[0.001371] (my_package) JobQueued: {'identifier': 'my_package', 'dependencies': OrderedDict()}
+[0.001703] (my_package) JobStarted: {'identifier': 'my_package'}
+[0.099599] (-) TimerEvent: {}
+[0.200140] (-) TimerEvent: {}
+[0.300774] (-) TimerEvent: {}
+[0.401363] (-) TimerEvent: {}
+[0.501940] (-) TimerEvent: {}
+[0.602799] (-) TimerEvent: {}
+[0.703950] (-) TimerEvent: {}
+[0.804688] (-) TimerEvent: {}
+[0.905288] (-) TimerEvent: {}
+[1.005885] (-) TimerEvent: {}
+[1.106496] (-) TimerEvent: {}
+[1.207237] (-) TimerEvent: {}
+[1.307915] (-) TimerEvent: {}
+[1.408968] (-) TimerEvent: {}
+[1.509564] (-) TimerEvent: {}
+[1.610198] (-) TimerEvent: {}
+[1.710823] (-) TimerEvent: {}
+[1.811461] (-) TimerEvent: {}
+[1.912097] (-) TimerEvent: {}
+[2.012700] (-) TimerEvent: {}
+[2.062472] (my_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_package', 'build', '--build-base', '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build', 'install', '--record', '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/install.log', '--single-version-externally-managed'], 'cwd': '/workspaces/autonomous-delivery-robot/ros2_ws/src/my_package', 'env': {'PYTHON_BASIC_REPL': '1', 'OPENBLAS_CORETYPE': 'ARMV8', 'PYTHONIOENCODING': 'utf-8', 'HOSTNAME': 'sahil-desktop', 'GIT_ASKPASS': '/vscode/vscode-server/bin/linux-arm64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/install/opt/rviz_ogre_vendor/lib:/opt/ros/humble/install/lib:/usr/local/cuda/compat:/usr/local/cuda/lib64::/usr/lib/aarch64-linux-gnu/tegra:/usr/lib/aarch64-linux-gnu/tegra', 'BROWSER': '/vscode/vscode-server/bin/linux-arm64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/helpers/browser.sh', 'HOME': '/root', 'OLDPWD': '/workspaces/autonomous-delivery-robot', 'TERM_PROGRAM_VERSION': '1.109.5', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-be2b79db-06f0-4e53-9852-f745cf094a18.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/vscode/vscode-server/bin/linux-arm64/072586267e68ece9a47aa43f8c108e0dcbf44622/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/vscode/vscode-server/bin/linux-arm64/072586267e68ece9a47aa43f8c108e0dcbf44622/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/root/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/opt/ros/humble/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-fa24fe00-bb7a-4e73-9b74-9f4c0411a8fd.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/opt/ros/humble/install/lib/aarch64-linux-gnu/pkgconfig:/opt/ros/humble/install/lib/pkgconfig', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/root/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/root/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/vscode-server/bin/linux-arm64/072586267e68ece9a47aa43f8c108e0dcbf44622/bin/remote-cli:/opt/ros/humble/install/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/root/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-arm64/bundled/scripts/noConfigScripts', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-fa24fe00-bb7a-4e73-9b74-9f4c0411a8fd.sock","/root/.gnupg/S.gpg-agent"]', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/root/.vscode-server/extensions/ms-python.debugpy-2025.18.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-b6c6083de06a7f58.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/root/.vscode-server/data/User/workspaceStorage/e6f04d2769b6547baa1c8564296ca52c/ms-python.python/pythonrc.py', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-1df4609b23.sock', 'ROS_ROOT': '/opt/ros/humble', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-fa24fe00-bb7a-4e73-9b74-9f4c0411a8fd.sock', 'AMENT_PREFIX_PATH': '/opt/ros/humble:/opt/ros/humble/install:/opt/ros/humble:', 'DEBIAN_FRONTEND': 'noninteractive', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package', 'CUDA_HOME': '/usr/local/cuda', 'PYTHONPATH': '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/prefix_override:/workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages:/opt/ros/humble/install/local/lib/python3.10/dist-packages:/opt/ros/humble/install/lib/python3.10/site-packages', 'NVIDIA_VISIBLE_DEVICES': 'all', 'COLCON': '1', 'ROS_WORKSPACE': '/workspaces/autonomous-delivery-robot/ros2_ws', 'CMAKE_PREFIX_PATH': '/opt/ros/humble/install'}, 'shell': False}
+[2.112838] (-) TimerEvent: {}
+[2.213488] (-) TimerEvent: {}
+[2.314067] (-) TimerEvent: {}
+[2.414664] (-) TimerEvent: {}
+[2.495202] (my_package) StdoutLine: {'line': b'running egg_info\n'}
+[2.496001] (my_package) StdoutLine: {'line': b'creating ../../build/my_package/my_package.egg-info\n'}
+[2.514790] (-) TimerEvent: {}
+[2.525736] (my_package) StdoutLine: {'line': b'writing ../../build/my_package/my_package.egg-info/PKG-INFO\n'}
+[2.528701] (my_package) StdoutLine: {'line': b'writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt\n'}
+[2.528988] (my_package) StdoutLine: {'line': b'writing requirements to ../../build/my_package/my_package.egg-info/requires.txt\n'}
+[2.529157] (my_package) StdoutLine: {'line': b'writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt\n'}
+[2.529298] (my_package) StdoutLine: {'line': b"writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[2.593502] (my_package) StdoutLine: {'line': b"reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[2.595138] (my_package) StdoutLine: {'line': b"writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[2.595727] (my_package) StdoutLine: {'line': b'running build\n'}
+[2.595940] (my_package) StdoutLine: {'line': b'running build_py\n'}
+[2.596209] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build\n'}
+[2.596424] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib\n'}
+[2.596639] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package\n'}
+[2.598429] (my_package) StdoutLine: {'line': b'copying my_package/motor_bridge_node.py -> /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package\n'}
+[2.599496] (my_package) StdoutLine: {'line': b'copying my_package/__init__.py -> /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package\n'}
+[2.600017] (my_package) StdoutLine: {'line': b'running install\n'}
+[2.601089] (my_package) StderrLine: {'line': b'/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[2.601376] (my_package) StderrLine: {'line': b'!!\n'}
+[2.601528] (my_package) StderrLine: {'line': b'\n'}
+[2.601660] (my_package) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.601787] (my_package) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[2.601911] (my_package) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[2.602092] (my_package) StderrLine: {'line': b'        standards-based tools.\n'}
+[2.602229] (my_package) StderrLine: {'line': b'\n'}
+[2.602355] (my_package) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[2.602482] (my_package) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.602608] (my_package) StderrLine: {'line': b'\n'}
+[2.602725] (my_package) StderrLine: {'line': b'!!\n'}
+[2.602842] (my_package) StderrLine: {'line': b'  self.initialize_options()\n'}
+[2.610742] (my_package) StdoutLine: {'line': b'running install_lib\n'}
+[2.614905] (-) TimerEvent: {}
+[2.641297] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package\n'}
+[2.641784] (my_package) StdoutLine: {'line': b'copying /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package/motor_bridge_node.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package\n'}
+[2.642026] (my_package) StdoutLine: {'line': b'copying /workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/build/lib/my_package/__init__.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package\n'}
+[2.643114] (my_package) StdoutLine: {'line': b'byte-compiling /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/motor_bridge_node.py to motor_bridge_node.cpython-310.pyc\n'}
+[2.648254] (my_package) StdoutLine: {'line': b'byte-compiling /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/__init__.py to __init__.cpython-310.pyc\n'}
+[2.648703] (my_package) StdoutLine: {'line': b'running install_data\n'}
+[2.678787] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index\n'}
+[2.679437] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index\n'}
+[2.680066] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index/packages\n'}
+[2.680872] (my_package) StdoutLine: {'line': b'copying resource/my_package -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/ament_index/resource_index/packages\n'}
+[2.681635] (my_package) StdoutLine: {'line': b'copying package.xml -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package\n'}
+[2.682337] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.683084] (my_package) StdoutLine: {'line': b'copying launch/robot_state_publisher.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.683722] (my_package) StdoutLine: {'line': b'copying launch/talker.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.684362] (my_package) StdoutLine: {'line': b'copying launch/teleop_joy.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.684955] (my_package) StdoutLine: {'line': b'copying launch/ign_gazebo_truck.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.685540] (my_package) StdoutLine: {'line': b'copying launch/listener.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.686688] (my_package) StdoutLine: {'line': b'copying launch/robot_motor.launch.py -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/launch\n'}
+[2.687358] (my_package) StdoutLine: {'line': b'creating /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description\n'}
+[2.688350] (my_package) StdoutLine: {'line': b'copying description/truck_robot_ign.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description\n'}
+[2.688665] (my_package) StdoutLine: {'line': b'copying description/truck_robot_ign.urdf copy.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description\n'}
+[2.689266] (my_package) StdoutLine: {'line': b'copying description/example_robot.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description\n'}
+[2.689537] (my_package) StdoutLine: {'line': b'copying description/truck_robot.urdf.xacro -> /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/share/my_package/description\n'}
+[2.689798] (my_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.715021] (-) TimerEvent: {}
+[2.721966] (my_package) StdoutLine: {'line': b'Copying ../../build/my_package/my_package.egg-info to /workspaces/autonomous-delivery-robot/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info\n'}
+[2.726734] (my_package) StdoutLine: {'line': b'running install_scripts\n'}
+[2.815188] (-) TimerEvent: {}
+[2.915792] (-) TimerEvent: {}
+[3.005490] (my_package) StdoutLine: {'line': b"writing list of installed files to '/workspaces/autonomous-delivery-robot/ros2_ws/build/my_package/install.log'\n"}
+[3.015942] (-) TimerEvent: {}
+[3.079611] (my_package) CommandEnded: {'returncode': 0}
+[3.116163] (-) TimerEvent: {}
+[3.217490] (-) TimerEvent: {}
+[3.261393] (my_package) JobEnded: {'identifier': 'my_package', 'rc': 0}
+[3.263245] (-) EventReactorShutdown: {}
